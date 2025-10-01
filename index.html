@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Special Wish for You!</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background-color: #000;
+  }
+
+  /* Slideshow container */
+  .slideshow {
+    display: flex;
+    position: absolute;
+    height: 100%;
+    width: max-content;
+    animation: slide 30s linear infinite;
+  }
+
+  .slideshow img {
+    height: 100%;
+    width: auto;
+    margin-right: 20px;
+    border: 5px solid white; /* optional: film-strip effect */
+    border-radius: 10px;
+  }
+
+  @keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* adjust if needed */
+  }
+
+  /* Foreground overlay */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+  }
+
+  button {
+    pointer-events: all;
+    padding: 20px 40px;
+    font-size: 24px;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: transform 0.2s, background-color 0.2s;
+  }
+
+  button:hover {
+    transform: scale(1.1);
+    background-color: #ff1493;
+  }
+</style>
+</head>
+<body>
+
+<!-- Slideshow background -->
+<div class="slideshow">
+  <img src="ruya1.jpg" alt="Photo 1">
+  <img src="ruya2.jpg" alt="Photo 2">
+  <img src="ruya3.jpg" alt="Photo 3">
+  <img src="ruya4.jpg" alt="Photo 4">
+  <img src="ruya5.jpg" alt="Photo 5">
+  <img src="ruya6.jpg" alt="Photo 6">
+  <!-- Add more images if you like -->
+</div>
+
+<!-- Foreground overlay -->
+<div class="overlay">
+  <button onclick="openPDF()">Click Me!</button>
+</div>
+
+<script>
+  function openPDF() {
+    window.open('Use your Brain to read.pdf', '_blank'); // replace 'wish.pdf' with your PDF filename
+  }
+</script>
+
+</body>
+</html>
